@@ -2,6 +2,10 @@ import os
 import warnings
 import threading
 
+from dotenv import load_dotenv
+load_dotenv()
+
+# 在调用app之前初始化之
 from backend.app import app
 from backend.kernel_publisher import start_kernel_publisher
 from backend.utils.threading import ThreadManager
